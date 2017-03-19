@@ -19795,12 +19795,12 @@
 	
 	var _widgetList2 = _interopRequireDefault(_widgetList);
 	
+	var _films = __webpack_require__(223);
+	
+	var _films2 = _interopRequireDefault(_films);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// Pages
-	
-	
-	// Layouts
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
@@ -19826,9 +19826,19 @@
 	        { component: _searchLayout2.default },
 	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _widgetList2.default })
 	      )
+	    ),
+	    _react2.default.createElement(
+	      _reactRouter.Route,
+	      { path: 'films' },
+	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _films2.default })
 	    )
 	  )
 	);
+	
+	// Pages
+	
+	
+	// Layouts
 
 /***/ },
 /* 160 */
@@ -24968,6 +24978,15 @@
 	              { to: '/widgets', activeClassName: 'active' },
 	              'Widgets'
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/films', activeClassName: 'active' },
+	              'Films'
+	            )
 	          )
 	        )
 	      ),
@@ -25241,12 +25260,58 @@
 	        "li",
 	        null,
 	        "Widget 3"
+	      ),
+	      _react2.default.createElement(
+	        "li",
+	        null,
+	        "Widget 4"
 	      )
 	    );
 	  }
 	});
 	
 	exports.default = WidgetList;
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// export default class FilmsComponent extends React.Component {
+	//
+	//     constructor(){}
+	//
+	//     render() {
+	//         return (
+	//             <div>Hobbit 3</div>
+	//         )
+	//     }
+	// }
+	
+	var FilmsComponent = _react2.default.createClass({
+	    displayName: 'FilmsComponent',
+	
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'h1',
+	            null,
+	            'User Profile for userId: '
+	        );
+	    }
+	});
+	
+	exports.default = FilmsComponent;
 
 /***/ }
 /******/ ]);

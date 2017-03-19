@@ -7,6 +7,7 @@ const WidgetList = React.createClass({
         <li>Widget 1</li>
         <li>Widget 2</li>
         <li>Widget 3</li>
+        <li>Widget 4</li>
       </ul>
     );
   }

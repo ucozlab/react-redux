@@ -10,6 +10,7 @@ import Home from './components/home';
 import UserList from './components/user-list';
 import UserProfile from './components/user-profile';
 import WidgetList from './components/widget-list';
+import FilmsComponent from './components/films';
 
 export default (
   <Router history={browserHistory}>
@@ -29,6 +30,9 @@ export default (
         </Route>
       </Route>
 
+        <Route path="films">
+            <IndexRoute component={FilmsComponent} />
+        </Route>
     </Route>
   </Router>
 );
